@@ -5,9 +5,11 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
+    <div className="min-h-screen bg-white text-black dark:bg-neutral-900 dark:text-white transition-colors duration-300">
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </div>
   );
 }
 
