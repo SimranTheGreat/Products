@@ -4,7 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import { useThemeStore } from "./store";
-
+import { GoogleOAuthProvider } from "@react-oauth/google";
 const applyTheme = (theme) => {
   document.documentElement.classList.toggle("dark", theme === "dark");
 };
@@ -16,8 +16,10 @@ useThemeStore.subscribe((state) => {
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </GoogleOAuthProvider>
   </StrictMode>,
 );

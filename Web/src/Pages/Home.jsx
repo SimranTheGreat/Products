@@ -1,4 +1,4 @@
-import { ThemeSwitch } from "../Components";
+import { Login, ThemeSwitch } from "../Components";
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <h1>Welcome to the Home Page</h1>
       <p>This is a simple home page component.</p>
       <ThemeSwitch />
+      <Login />
     </div>
   );
 }
