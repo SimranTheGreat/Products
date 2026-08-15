@@ -1,4 +1,4 @@
-import { Login, ThemeSwitch } from "../Components";
+import { AIChat, Login, ThemeSwitch } from "../Components";
 
 export default function Home() {
   return (
@@ -7,6 +7,7 @@ export default function Home() {
       <p>This is a simple home page component.</p>
       <ThemeSwitch />
       <Login />
+      <AIChat />
     </div>
   );
 }
